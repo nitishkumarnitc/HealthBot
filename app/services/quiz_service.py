@@ -1,9 +1,11 @@
+# app/services/quiz_service.py
 import logging
 import json
 import re
 from tenacity import retry, stop_after_attempt, wait_exponential
-from langchain_core.messages import SystemMessage, HumanMessage
-from app.services.summary_service import llm  # reuse same LLM instance
+
+from app.core.prompts import build_quiz_messages, build_grader_messages
+from app.services.llm import llm  # reuse same LLM instance (ChatOpenAI)
 
 logger = logging.getLogger("healthbot.quiz_service")
 
@@ -17,25 +19,18 @@ def _extract_text_from_agenerate_result(result) -> str:
       - result may already be a plain string (fallback)
     """
     try:
-        # Typical shape: result.generations -> [[Generation(...)]]
         gens = getattr(result, "generations", None)
         if gens and len(gens) > 0 and len(gens[0]) > 0:
             gen = gens[0][0]
-            # prefer .text
             if hasattr(gen, "text") and gen.text is not None:
                 return gen.text
-            # some versions return a message object
             if hasattr(gen, "message") and getattr(gen.message, "content", None) is not None:
                 return gen.message.content
-            # sometimes generation itself is a tuple-like, try str
             return str(gen)
-        # fallback: maybe result is a string already
         if isinstance(result, str):
             return result
-        # last resort: stringify the whole object
         return str(result)
     except Exception:
-        # don't crash extraction; return stringified result
         try:
             return str(result)
         except Exception:
@@ -44,32 +39,29 @@ def _extract_text_from_agenerate_result(result) -> str:
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=1, max=8))
 async def generate_quiz_question(summary: str) -> dict:
-    prompt = (
-        "Create exactly one short comprehension question for a patient based on the summary below. "
-        "Prefer short-answer format. Return a JSON object only with keys: question, options (null if not multiple-choice), "
-        "answer (canonical), hint (one sentence). Example: {\"question\":\"...\",\"options\":null,\"answer\":\"...\",\"hint\":\"...\"}\n\n"
-        f"SUMMARY:\n{summary}"
-    )
-    sys = SystemMessage(content="You are a clear quiz generator for patient education.")
-    hum = HumanMessage(content=prompt)
+    """
+    Generate exactly one quiz question using centralized prompts.
+    Returns a dict with keys: question, options (or None), answer (canonical), hint.
+    """
+    # build messages using prompts.py (returns [SystemMessage, HumanMessage])
+    messages = build_quiz_messages(summary, prefer_short_answer=True)
+
     try:
-        # NOTE: agenerate expects a batch (list of message-lists), so pass [[sys, hum]]
-        result = await llm.agenerate(messages=[[sys, hum]])
+        # agenerate expects a batch (list of message-lists)
+        result = await llm.agenerate([messages])
 
-        # extract text safely
         out_text = _extract_text_from_agenerate_result(result)
-        logger.debug("LLM raw output (generate_quiz_question): %s", out_text)
+        logger.debug("LLM raw output (generate_quiz_question): %s", out_text[:1000])
 
-        # try parse JSON blob
+        # try parse JSON blob from model output
         m = re.search(r"(\{[\s\S]*\})", out_text)
         if m:
             try:
-                j = json.loads(m.group(1))
-                return j
+                return json.loads(m.group(1))
             except json.JSONDecodeError:
-                logger.debug("Found JSON-like blob but failed to decode; blob: %s", m.group(1))
+                logger.debug("Found JSON-like blob but failed to decode; blob: %s", m.group(1)[:500])
 
-        # fallback: return as plain question
+        # fallback: return raw text as question
         return {"question": out_text.strip(), "options": None, "answer": "", "hint": ""}
     except Exception as e:
         logger.exception("Quiz generation failed: %s", e)
@@ -79,30 +71,25 @@ async def generate_quiz_question(summary: str) -> dict:
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=1, max=8))
 async def evaluate_answer(summary: str, canonical_answer: str, user_answer: str) -> dict:
     """
-    Ask the LLM to grade and produce explanation + citation snippets from summary.
-    Returns JSON object: { score: float, verdict: str, explanation: str, citations: [str] }
+    Grade the user's answer using centralized grader prompts.
+    Returns JSON: { score: float, verdict: str, explanation: str, citations: [str] }
     """
-    prompt = (
-        "You are a helpful grader. Grade the USER_ANSWER against the CANONICAL_ANSWER and the SUMMARY. "
-        "Return JSON only with fields: score (0.0-1.0), verdict ('correct','partial','incorrect'), explanation (short), citations (list of short snippets from SUMMARY that justify the grade).\n\n"
-        f"SUMMARY:\n{summary}\n\nCANONICAL_ANSWER:\n{canonical_answer}\n\nUSER_ANSWER:\n{user_answer}"
-    )
-    sys = SystemMessage(content="You are a fair grader for patient comprehension quizzes.")
-    hum = HumanMessage(content=prompt)
+    messages = build_grader_messages(summary, canonical_answer, user_answer)
+
     try:
-        result = await llm.agenerate(messages=[[sys, hum]])
+        result = await llm.agenerate([messages])
         out_text = _extract_text_from_agenerate_result(result)
-        logger.debug("LLM raw output (evaluate_answer): %s", out_text)
+        logger.debug("LLM raw output (evaluate_answer): %s", out_text[:1000])
 
         m = re.search(r"(\{[\s\S]*\})", out_text)
         if m:
             try:
                 return json.loads(m.group(1))
             except json.JSONDecodeError:
-                logger.debug("Found JSON-like blob but failed to decode; blob: %s", m.group(1))
+                logger.debug("Found JSON-like blob but failed to decode; blob: %s", m.group(1)[:500])
 
-        # fallback simple heuristic
-        verdict = "correct" if canonical_answer.lower() in user_answer.lower() else "incorrect"
+        # fallback heuristic
+        verdict = "correct" if canonical_answer.strip().lower() in user_answer.strip().lower() else "incorrect"
         score = 1.0 if verdict == "correct" else 0.0
         explanation = "Matches the canonical answer." if verdict == "correct" else "Does not match the canonical answer."
         return {"score": score, "verdict": verdict, "explanation": explanation, "citations": [canonical_answer[:120]]}

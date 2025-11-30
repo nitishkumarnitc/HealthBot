@@ -1,17 +1,11 @@
 # app/core/workflow.py
 import uuid
-import asyncio
 from typing import Dict, Any
 from dotenv import load_dotenv
-from IPython.display import Image, display
+
 load_dotenv()
 
-# Try to import langgraph; if not available, fallback to a minimal orchestrator
-try:
-    from langgraph.graph import StateGraph
-    LANGGRAPH_AVAILABLE = True
-except Exception:
-    LANGGRAPH_AVAILABLE = False
+from langgraph.graph import StateGraph
 
 from app.services.search_service import search_medical_info
 from app.services.summary_service import summarize_text_for_patient
@@ -33,6 +27,7 @@ async def node_ask_topic(session_id: str, topic: str):
     await create_session(session_id, {"session_id": session_id, "topic": topic})
     return {"topic": topic}
 
+
 async def node_search(session_id: str):
     state = await get_session(session_id)
     if not state or "topic" not in state:
@@ -40,6 +35,7 @@ async def node_search(session_id: str):
     results = await search_medical_info(state["topic"])
     await update_session(session_id, {"search_results": results})
     return {"search_results": results}
+
 
 async def node_summarize(session_id: str):
     state = await get_session(session_id)
@@ -49,6 +45,7 @@ async def node_summarize(session_id: str):
     await update_session(session_id, {"summary": summary})
     return {"summary": summary}
 
+
 async def node_generate_quiz(session_id: str):
     state = await get_session(session_id)
     if not state or "summary" not in state:
@@ -57,9 +54,10 @@ async def node_generate_quiz(session_id: str):
     # Remove canonical answer from what will be returned to client,
     # but keep it in session for grading (store under _canonical)
     canonical = quiz.get("answer", "")
-    public_quiz = {k: quiz.get(k) for k in ("question","options","hint")}
+    public_quiz = {k: quiz.get(k) for k in ("question", "options", "hint")}
     await update_session(session_id, {"quiz": {"public": public_quiz, "_canonical": canonical}})
     return {"quiz": public_quiz}
+
 
 async def node_evaluate(session_id: str, user_answer: str):
     state = await get_session(session_id)
@@ -70,45 +68,38 @@ async def node_evaluate(session_id: str, user_answer: str):
     await update_session(session_id, {"last_eval": eval_result})
     return {"evaluation": eval_result}
 
+
 async def node_clear(session_id: str):
     await clear_session(session_id)
     return {"cleared": True}
 
 
 # If LangGraph is available, create an explicit StateGraph
-if LANGGRAPH_AVAILABLE:
-    Graph = StateGraph  # alias
-    # A compact graph definition; LangGraph usage may differ slightly by version
-    g = Graph(dict)  # using dict as schema
-    g.add_node("ask_topic", node_ask_topic)
-    g.add_node("search", node_search)
-    g.add_node("summarize", node_summarize)
-    g.add_node("generate_quiz", node_generate_quiz)
-    g.add_node("evaluate", node_evaluate)
-    g.add_node("clear", node_clear)
+Graph = StateGraph  # alias
 
-    g.set_entry_point("ask_topic")
-    g.add_edge("ask_topic", "search")
-    g.add_edge("search", "summarize")
-    g.add_edge("summarize", "generate_quiz")
-    g.add_edge("generate_quiz", "evaluate")
+# A compact graph definition; LangGraph usage may differ slightly by version
+g = Graph(dict)  # using dict as schema
+g.add_node("ask_topic", node_ask_topic)
+g.add_node("search", node_search)
+g.add_node("summarize", node_summarize)
+g.add_node("generate_quiz", node_generate_quiz)
+g.add_node("evaluate", node_evaluate)
+g.add_node("clear", node_clear)
 
-    # NOTE: removed the invalid edge g.add_edge("any", "clear")
-    # If you want a common utility path to clear, wire a real node (e.g. "evaluate" -> "clear")
-    # g.add_edge("evaluate", "clear")
+g.set_entry_point("ask_topic")
+g.add_edge("ask_topic", "search")
+g.add_edge("search", "summarize")
+g.add_edge("summarize", "generate_quiz")
+g.add_edge("generate_quiz", "evaluate")
 
-    COMPILED_GRAPH = g.compile()
-    # display(
-    #     Image(
-    #         COMPILED_GRAPH.get_graph().draw_mermaid_png()
-    #     )
-    # )
-else:
-    COMPILED_GRAPH = None
+# NOTE: removed the invalid edge g.add_edge("any", "clear")
+# If you want a common utility path to clear, wire a real node (e.g. "evaluate" -> "clear")
+# g.add_edge("evaluate", "clear")
+
+COMPILED_GRAPH = g.compile()
 
 
 # High-level helpers for FastAPI routes to call
-
 async def start_topic_flow(topic: str, session_id: str = None) -> Dict[str, Any]:
     """
     Creates a session and runs: ask_topic -> search -> summarize.
@@ -130,6 +121,7 @@ async def start_topic_flow(topic: str, session_id: str = None) -> Dict[str, Any]
     }
     return public
 
+
 async def request_quiz(session_id: str) -> Dict[str, Any]:
     """
     Generates a quiz question from stored summary.
@@ -138,6 +130,7 @@ async def request_quiz(session_id: str) -> Dict[str, Any]:
     state = await get_session(session_id)
     return {"session_id": session_id, "quiz": state["quiz"]["public"]}
 
+
 async def submit_answer(session_id: str, user_answer: str) -> Dict[str, Any]:
     """
     Evaluates the user's answer and returns evaluation + updated grade.
@@ -145,6 +138,7 @@ async def submit_answer(session_id: str, user_answer: str) -> Dict[str, Any]:
     res = await node_evaluate(session_id, user_answer)
     state = await get_session(session_id)
     return {"session_id": session_id, "evaluation": res["evaluation"], "last_eval": state.get("last_eval")}
+
 
 async def reset_session(session_id: str):
     await node_clear(session_id)

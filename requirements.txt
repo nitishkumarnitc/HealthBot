@@ -11,3 +11,4 @@ redis>=4.6.0
 tavily-python
 tenacity
 uvicorn[standard]
+streamlit

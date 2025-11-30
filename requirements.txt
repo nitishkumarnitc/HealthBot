@@ -1,8 +1,13 @@
+langchain-core
 fastapi
-uvicorn
-langchain
+httpx
+IPython
+langchain>1.0.0
 langgraph
-tavily-python
-openai
+openai>=1.0.0
 pydantic
 python-dotenv
+redis>=4.6.0
+tavily-python
+tenacity
+uvicorn[standard]

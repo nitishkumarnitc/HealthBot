@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31f2c6bc-1e60-4f57-8544-0fedf71094fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/HealthBot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/workflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/healthbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/healthbot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/quiz_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/quiz_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/search_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/search_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/summary_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/summary_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/state.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,0 +1,697 @@
+Anxiety
+Depression
+Obsessive-Compulsive Disorder (OCD)
+Post-traumatic Stress Disorder (PTSD)
+Bipolar Disorder
+Schizophrenia
+Panic Disorder
+Generalized Anxiety Disorder
+Social Anxiety Disorder
+Specific Phobia
+Agoraphobia
+Major Depressive Disorder
+Persistent Depressive Disorder (Dysthymia)
+Seasonal Affective Disorder
+Postpartum Depression
+Perinatal Mental Health
+Suicidal Ideation
+Self-harm
+Attention Deficit Hyperactivity Disorder (ADHD)
+Autism Spectrum Disorder
+Learning Disabilities
+Intellectual Disability
+Oppositional Defiant Disorder
+Conduct Disorder
+Insomnia
+Sleep Apnea
+Restless Legs Syndrome
+Narcolepsy
+Circadian Rhythm Disorders
+Migraine
+Tension Headache
+Cluster Headache
+Chronic Daily Headache
+Concussion
+Traumatic Brain Injury
+Alzheimer's Disease
+Vascular Dementia
+Lewy Body Dementia
+Frontotemporal Dementia
+Parkinson's Disease
+Essential Tremor
+Multiple Sclerosis
+Epilepsy
+Seizure Disorder
+Stroke (Cerebrovascular Accident)
+Transient Ischemic Attack (TIA)
+Aneurysm
+Subarachnoid Hemorrhage
+Peripheral Neuropathy
+Carpal Tunnel Syndrome
+Guillain-Barré Syndrome
+Myasthenia Gravis
+Amyotrophic Lateral Sclerosis (ALS)
+Bell's Palsy
+Vertigo
+Meniere's Disease
+Hearing Loss
+Otitis Media
+Tinnitus
+Sinusitis
+Allergic Rhinitis
+Common Cold (Upper Respiratory Infection)
+Influenza (Flu)
+COVID-19
+Pneumonia
+Bronchitis
+Chronic Obstructive Pulmonary Disease (COPD)
+Asthma
+Pulmonary Embolism
+Pulmonary Hypertension
+Interstitial Lung Disease
+Tuberculosis (TB)
+Bronchiectasis
+Cystic Fibrosis
+Lung Cancer
+Smoking Cessation
+Shortness of Breath (Dyspnea)
+Chest Pain
+Angina
+Coronary Artery Disease
+Myocardial Infarction (Heart Attack)
+Heart Failure
+Cardiomyopathy
+Arrhythmia
+Atrial Fibrillation
+Hypertension (High Blood Pressure)
+Hypotension (Low Blood Pressure)
+Hyperlipidemia (High Cholesterol)
+Stroke Prevention
+Peripheral Artery Disease
+Deep Vein Thrombosis (DVT)
+Varicose Veins
+Venous Insufficiency
+Anemia
+Iron Deficiency Anemia
+Vitamin B12 Deficiency
+Folate Deficiency
+Sickle Cell Disease
+Thalassemia
+Leukemia
+Lymphoma
+Myelodysplastic Syndromes
+Bleeding Disorders
+Hemophilia
+Thrombocytopenia
+Infectious Diseases
+HIV / AIDS
+Hepatitis A
+Hepatitis B
+Hepatitis C
+Mononucleosis (Mono)
+Urinary Tract Infection (UTI)
+Sexually Transmitted Infections (STIs)
+Chlamydia
+Gonorrhea
+Syphilis
+Herpes Simplex Virus (HSV)
+Human Papillomavirus (HPV)
+Genital Warts
+Meningitis
+Endocarditis
+Cellulitis
+Sepsis
+Lyme Disease
+Malaria
+Dengue Fever
+Zika Virus
+Rabies
+Tetanus
+Pertussis (Whooping Cough)
+Vaccination / Immunization
+Travel Medicine
+Antibiotic Stewardship
+Antiviral Medications
+Antifungal Infections
+Bacterial Infections
+Viral Infections
+Parasitic Infections
+Fungal Infections
+Gastroenterology
+Gastroesophageal Reflux Disease (GERD)
+Peptic Ulcer Disease
+Gastritis
+Irritable Bowel Syndrome (IBS)
+Inflammatory Bowel Disease (IBD)
+Crohn's Disease
+Ulcerative Colitis
+Celiac Disease
+Lactose Intolerance
+Constipation
+Diarrhea
+Hemorrhoids
+Pancreatitis
+Gallstones
+Cholecystitis
+Hepatitis
+Cirrhosis
+Nonalcoholic Fatty Liver Disease (NAFLD)
+Liver Failure
+Pancreatic Cancer
+Colon Cancer
+Colorectal Cancer Screening
+Diverticulitis
+Small Intestinal Bacterial Overgrowth (SIBO)
+Appendicitis
+Abdominal Pain
+Nausea and Vomiting
+Food Poisoning
+Weight Loss
+Weight Gain
+Obesity
+Bariatric Surgery
+Nutrition
+Dietary Supplements
+Malnutrition
+Eating Disorders
+Anorexia Nervosa
+Bulimia Nervosa
+Binge Eating Disorder
+Endocrinology
+Diabetes Mellitus Type 1
+Diabetes Mellitus Type 2
+Gestational Diabetes
+Hypoglycemia
+Hyperglycemia
+Thyroid Disorders
+Hypothyroidism
+Hyperthyroidism
+Hashimoto's Thyroiditis
+Graves' Disease
+Goiter
+Parathyroid Disorders
+Osteoporosis
+Osteopenia
+Calcium Disorders
+Vitamin D Deficiency
+Adrenal Disorders
+Cushing's Syndrome
+Addison's Disease
+Polycystic Ovary Syndrome (PCOS)
+Menopause
+Hormone Replacement Therapy
+Infertility
+Reproductive Health
+Contraception
+Pregnancy Care (Prenatal)
+Postnatal Care
+Preterm Labor
+Ectopic Pregnancy
+Miscarriage
+Preeclampsia
+Gestational Hypertension
+Breastfeeding / Lactation
+Gynecology
+Pelvic Pain
+Endometriosis
+Uterine Fibroids
+Cervical Cancer
+Ovarian Cancer
+Pap Smear Screening
+Menstrual Disorders
+Urinary Health
+Urinary Incontinence
+Overactive Bladder
+Interstitial Cystitis
+Benign Prostatic Hyperplasia (BPH)
+Prostate Cancer
+Erectile Dysfunction
+Sexual Health
+Fertility Treatments
+Male Reproductive Health
+Pediatrics
+Childhood Vaccinations
+Growth and Development
+Failure to Thrive
+Common Pediatric Illnesses
+Neonatal Care
+Newborn Jaundice
+SIDS (Sudden Infant Death Syndrome)
+Pediatric Asthma
+Pediatric Allergies
+Adolescent Health
+Immunizations in Children
+Dermatology
+Eczema (Atopic Dermatitis)
+Psoriasis
+Acne
+Rosacea
+Skin Infections
+Fungal Skin Infections
+Warts
+Skin Cancer
+Melanoma
+Basal Cell Carcinoma
+Squamous Cell Carcinoma
+Contact Dermatitis
+Hives (Urticaria)
+Burns
+Wound Care
+Rheumatology
+Rheumatoid Arthritis
+Osteoarthritis
+Gout
+Lupus (Systemic Lupus Erythematosus)
+Sjögren's Syndrome
+Ankylosing Spondylitis
+Fibromyalgia
+Vasculitis
+Autoimmune Disorders
+Joint Pain
+Back Pain
+Musculoskeletal
+Sprains and Strains
+Tendinitis
+Bursitis
+Fractures
+Osteomyelitis
+Sports Injuries
+Rehabilitation
+Physical Therapy
+Occupational Therapy
+Orthopedics
+Joint Replacement
+Knee Replacement
+Hip Replacement
+Shoulder Injuries
+Spine Disorders
+Scoliosis
+Herniated Disc
+Sciatica
+Chronic Pain Management
+Pain Medicine
+Interventional Pain Procedures
+Palliative Care
+Hospice Care
+Oncology
+Cancer Screening
+Breast Cancer
+Lung Cancer Screening
+Prostate Cancer Screening
+Colorectal Cancer Treatment
+Chemotherapy
+Radiation Therapy
+Immunotherapy
+Targeted Therapy
+Palliative Oncology
+Survivorship Care
+Genetics
+Genetic Testing
+BRCA Mutations
+Hereditary Cancer Syndromes
+Genetic Counseling
+Rare Diseases
+Metabolic Disorders
+Inborn Errors of Metabolism
+Cardio-oncology
+Hematology
+Anemia (various types)
+Clotting Disorders
+Blood Transfusions
+Bone Marrow Transplant
+Hematologic Malignancies
+Transfusion Reactions
+Nephrology
+Acute Kidney Injury
+Chronic Kidney Disease
+Kidney Stones
+Glomerulonephritis
+Nephrotic Syndrome
+Dialysis (Hemodialysis, Peritoneal Dialysis)
+Kidney Transplant
+Electrolyte Disorders
+Urology
+Kidney Infections (Pyelonephritis)
+Bladder Cancer
+Prostate Health
+Male Infertility
+Pediatric Urology
+Andrology
+Incontinence Management
+Geriatrics
+Geriatric Syndromes
+Polypharmacy
+Falls Prevention
+Cognitive Impairment
+Advance Care Planning
+Elder Care
+Home Health
+Preventive Medicine
+Health Screening
+Annual Physical Exam
+Cancer Screening Guidelines
+Vaccination Schedules
+Lifestyle Medicine
+Smoking Cessation Programs
+Alcohol Use Disorder
+Substance Use Disorder
+Harm Reduction
+Opioid Use Disorder
+Naloxone and Overdose Prevention
+Behavioral Health Integration
+Counseling and Psychotherapy
+CBT (Cognitive Behavioral Therapy)
+Dialectical Behavior Therapy (DBT)
+Motivational Interviewing
+Mindfulness and Stress Reduction
+Peer Support Programs
+Public Health
+Injury Prevention
+Epidemiology
+Health Promotion
+Occupational Health
+Environmental Health
+Health Disparities
+Global Health
+Telemedicine / Telehealth
+Remote Monitoring
+Digital Health
+mHealth (mobile health)
+Wearables and Health Tracking
+Health Data Privacy (HIPAA)
+Electronic Health Records
+Healthcare Quality
+Patient Safety
+Clinical Decision Support
+Antimicrobial Resistance
+Antibiotic Prescribing
+Medication Safety
+Pharmacology
+Drug Interactions
+Medication Adherence
+Pharmacogenomics
+Vitamins and Supplements
+Herbal Remedies
+Alternative Medicine
+Integrative Medicine
+Chronic Disease Management
+Care Coordination
+Case Management
+Home Monitoring Devices
+Remote Patient Monitoring
+Health Coaching
+Behavior Change Techniques
+Smoking Cessation Aids
+Nicotine Replacement Therapy
+Cardiac Rehabilitation
+Pulmonary Rehabilitation
+Diabetes Education Programs
+Lifestyle Coaching
+Health Coaching
+Occupational Therapy Interventions
+Speech and Language Therapy
+Audiology and Hearing Aids
+Vision Health
+Cataracts
+Glaucoma
+Macular Degeneration
+Refractive Errors (Myopia, Hyperopia)
+Retinal Disorders
+Low Vision Rehabilitation
+Emergency Medicine
+First Aid Basics
+CPR and AED Use
+Trauma Care
+Acute Care Management
+Poisoning and Overdose
+Burn Management
+Emergency Preparedness
+Disaster Medicine
+Critical Care
+ICU Care
+Sepsis Management
+Ventilator Management
+Organ Failure Support
+Ethics in Medicine
+Medical Decision Making
+Informed Consent
+End-of-Life Care
+Palliative Ethics
+Clinical Trials
+Research Ethics
+Informed Consent in Research
+Biostatistics Basics
+Patient Education
+Medication Counseling
+Self-management Education
+Chronic Care Models
+Shared Decision Making
+Pain Assessment Tools
+Quality of Life Measures
+Health Literacy
+Advance Directives
+Caregiver Support
+Smoking-related Diseases
+COPD Management
+Asthma Action Plan
+Peak Flow Monitoring
+Inhaler Technique
+Allergy Management
+Immunotherapy (Allergy Shots)
+Food Allergies
+Anaphylaxis
+Emergency Epinephrine Use
+Pediatric Nutrition
+Breastfeeding Support
+Weaning and Complementary Feeding
+Childhood Obesity Prevention
+Adolescent Substance Use
+Teen Mental Health
+School Health Services
+Vaccination Hesitancy
+Vaccine Safety and Efficacy
+Men's Health
+Women's Health
+Transgender Health
+LGBTQ+ Health
+Sexual and Reproductive Health
+Contraceptive Counseling
+STD Screening and Treatment
+Prenatal Genetic Screening
+High-Risk Pregnancy Management
+Perinatal Mental Health
+Infertility Evaluations
+Fertility Preservation
+Family Planning
+Menstrual Health
+Birth Control Options
+Tuberculosis Screening and Treatment
+Hepatitis Screening
+Hepatitis Vaccination
+HIV Prevention (PrEP)
+HIV Treatment and Care
+Antiretroviral Therapy
+Post-exposure Prophylaxis (PEP)
+HIV Testing and Counseling
+Substance Use Treatments (MAT)
+Medication Assisted Treatment (MAT)
+Buprenorphine Treatment
+Methadone Maintenance
+Alcohol Use Interventions
+Behavioral Interventions for Addiction
+Workplace Health
+Ergonomics
+Occupational Safety
+Noise Exposure
+Heat-related Illness
+Shift Work Health
+Travel Vaccinations
+Altitude Sickness
+Travelers' Diarrhea Prevention
+Travel Health Advice
+Dermatologic Procedures
+Mole Checks and Skin Exams
+Sun Safety and Skin Cancer Prevention
+Cosmetic Dermatology Basics
+Wound Healing and Suturing Basics
+Minor Procedure Aftercare
+Hormonal Disorders
+Endocrine Tumors
+Pituitary Disorders
+Growth Disorders
+Pediatric Endocrinology
+Metabolic Syndrome
+Lifestyle Diseases
+Chronic Kidney Disease Risk Factors
+Renal Protective Strategies
+Bone Health and Fracture Prevention
+Fall Risk Assessment
+Home Safety for Seniors
+Assistive Devices and Mobility Aids
+Speech Therapy for Stroke Survivors
+Aphasia and Communication Strategies
+Care Transitions
+Hospital to Home Planning
+Medication Reconciliation
+Postoperative Care
+Surgical Site Infection Prevention
+Preoperative Assessment
+Anesthesia Basics
+Postoperative Pain Control
+Steroid Use and Side Effects
+Immunosuppression and Infection Risk
+Organ Transplant Care and Monitoring
+Transplant Rejection Signs
+Kidney Donation and Transplantation
+Liver Transplant Care
+Cardiac Transplant Basics
+Genitourinary Infections
+Vaginitis
+Bacterial Vaginosis
+Yeast Infections
+Pelvic Inflammatory Disease (PID)
+Sexual Health Counseling
+Family Violence and Intimate Partner Violence
+Screening for Abuse
+Trauma-Informed Care
+Domestic Violence Resources
+Smoking and Pregnancy Risks
+Prenatal Care Essentials
+Fetal Monitoring Basics
+Newborn Screening Programs
+Neonatal Resuscitation Basics
+Child Development Milestones
+Autism Screening Tools
+Developmental Behavioral Pediatrics
+Pediatric Behavioral Interventions
+School-based Health Programs
+Community Health Programs
+Home Visit Programs
+Chronic Fatigue Syndrome (Myalgic Encephalomyelitis)
+Post-viral Syndromes
+Long COVID (Post-acute Sequelae of SARS-CoV-2)
+Rehabilitation after COVID
+Vaccine Side Effects and Management
+Health Coaching for Chronic Conditions
+Self-monitoring for Hypertension
+Home Blood Pressure Monitoring
+Dietary Counseling for Diabetes
+Insulin Management Basics
+Glucose Monitoring and CGM
+Hypoglycemia Management
+Foot Care in Diabetes
+Diabetic Retinopathy Screening
+Diabetes Foot Ulcer Prevention
+Oral Health
+Dental Caries Prevention
+Gum Disease (Periodontitis)
+Oral Hygiene Practices
+Oral Cancer Screening
+Temporomandibular Joint Disorders (TMJ)
+Sleep Hygiene
+Stress Management Techniques
+Relaxation Exercises
+Progressive Muscle Relaxation
+Biofeedback Basics
+Mind-body Medicine
+Yoga for Health (basic guidance)
+Exercise Prescription Basics
+Physical Activity Guidelines
+Cardio Fitness Recommendations
+Resistance Training Basics
+Fall Prevention Exercises
+Balance Training
+Sports Concussion Return-to-Play
+Hydration and Electrolyte Balance
+Heatstroke Prevention
+Cold-related Illness Prevention
+Sunburn Treatment
+Skin Cancer Early Warning Signs
+Alcohol Use Screening (AUDIT)
+Brief Intervention for Substance Use
+Harm Reduction Strategies
+Naloxone Distribution and Training
+Community Resources for Addiction
+Caregiver Burden and Support Strategies
+Respite Care Options
+Elder Abuse Screening and Resources
+Home Safety Checklists
+Adaptive Equipment Overview
+Mobility Assistance and Walkers
+Wheelchair Basics
+Home Modifications for Accessibility
+Palliative Symptom Management
+Pain Control Options in Palliative Care
+Dyspnea Management in Advanced Disease
+Nausea and Vomiting in Palliative Care
+Spiritual Care and Support Services
+Advance Care Planning Conversations
+Organ Donation Basics
+Clinical Documentation Tips for Providers
+Medical Coding Basics
+Billing and Insurance Basics
+Prior Authorization Processes
+Healthcare Navigation for Patients
+Community Health Workers Role
+Patient Advocacy Basics
+Shared Decision Making Tools
+Decision Aids for Treatment Choices
+Health Coaching Techniques
+Motivational Interviewing Basics
+Brief Behavioral Activation
+Sleep Disorder Screening Tools
+Cognitive Screening Tools (MMSE, MOCA)
+Fall Risk Screening (TUG Test)
+Frailty Assessment Basics
+Home Oxygen Use and Management
+Pulse Oximetry Use and Interpretation
+Asthma Action Plan Basics
+Inhaler Types and Proper Technique
+Peak Flow Monitoring Basics
+Pneumococcal Vaccination Guidance
+Influenza Vaccination Guidance
+HPV Vaccination Guidance
+Travel Health Counseling
+Postoperative Rehabilitation Plans
+Surgical Follow-up Care
+Wound Dressing Choices
+Pressure Ulcer Prevention and Care
+Catheter Care Basics
+Ostomy Care and Education
+Enteral Feeding and Tube Care
+Parenteral Nutrition Basics
+Dietary Management for CKD
+Sodium Restriction Guidelines
+Fluid Restriction Principles
+Medication Side Effects Monitoring
+Allergy Testing and Interpretation
+Immunotherapy for Allergies
+Sinus Surgery Basics
+ENT (Ear Nose Throat) Conditions Overview
+Sleep Apnea CPAP Basics
+Obstructive Sleep Apnea Management
+Central Sleep Apnea Overview
+Pediatric Sleep Disorders Overview
+Tourette Syndrome
+Tic Disorders
+Neurodevelopmental Disorders Overview
+Neurorehabilitation Principles
+Brain Tumor Basics
+Neuro-oncology Introduction
+Spinal Cord Injury Care Basics
+Pressure Injury Prevention
+Seizure First Aid
+Status Epilepticus Emergency Management
+Neurocritical Care Basics
+Endocrine Emergencies (Thyroid Storm, DKA)
+Diabetic Ketoacidosis (DKA) Management
+Hyperosmolar Hyperglycemic State (HHS)
+Hypothyroid Myxedema Basics
+Thyroid Nodule Evaluation
+Adrenal Crisis Recognition
+Pituitary Apoplexy Basics
+Pediatric Diabetes Care
+Insulin Pump Basics
+Continuous Glucose Monitoring (CGM) Overview
+Diabetes Sick Day Rules
+Glucose Targets and HbA1c Explanation
